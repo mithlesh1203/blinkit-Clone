@@ -5,7 +5,8 @@ const productSchema = Schema({
     price: { type: Number, req: true },
     discount: { type: Number, req: true, default: 0 },
     shelf_life: { type: Number, req: true },
-    tag: { type: String, req: true },
+    category: [{ type: String, req: true }],
+    image_links: [{ type: String, req: true }],
     key_features: { type: String },
     description: { type: String }
 }, {
