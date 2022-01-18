@@ -211,8 +211,20 @@ body::-webkit-scrollbar {
     height: 100px;
     background-color: rgb(247,247,247);
     margin-top: 6%;
+    box-sizing: border-box;
+    padding: 2% 0 0 1% ;
+    color: rgb(55,163,203);
+    font-size: .95vw;
+}
+
+#locationName{
+
+    display: grid;
+    grid-template-columns: 70% 30%;
+
 
 }
+
 
 div{
     /* border: 1px solid black; */
