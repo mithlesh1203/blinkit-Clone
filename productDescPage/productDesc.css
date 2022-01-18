@@ -4,8 +4,13 @@
     font-family: Helvetica;
 }
 
+.c{
+    cursor: pointer;
+}
+
 body{
     margin: -1px;
+    box-sizing: border-box;
 }
 
 #firstCont{
@@ -25,11 +30,12 @@ body{
 
     height: 35px;
     box-shadow: 0px 1.5px 0px 0px rgb(216,216,216);
+    
 }
 
 #namesTag{
 
-    width: 73%;
+    width: 75%;
     margin-left: 12%;
     height: 35px;
     display: grid;
@@ -60,7 +66,153 @@ body{
 }
 
 
+#secondCont{
 
+    width: 100%;
+    height: 610px;
+    overflow: scroll;
+    margin: 0;
+margin-top: .2%;
+
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#secondCont::-webkit-scrollbar {
+  display: none;
+}
+
+#outerBox{
+
+    width: 74%;
+    height: 350px;
+    margin-left: 12%;
+    margin-top: 2%;
+
+    display: grid;
+    grid-gap: 7%;
+    grid-template-columns: 43% 50%;
+
+}
+
+#imageBox{
+    /* padding-top: 5%; */
+    /* padding-bottom: 8%; */
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    height: 100%;
+}
+
+#left{
+    margin: 200% 0 0 50%;
+    color: rgb(110,110,110);
+}
+
+#right{
+    margin: 200% 0 0 30%;
+    color: rgb(110,110,110);
+}
+
+#slideShow{
+    box-sizing: border-box;
+    transform: translateX(0);
+}
+
+#slideShow img{
+    width: 95%;
+    height: 95%;
+    /* border: 1px solid green; */
+    margin: 0% 0 0 2%;
+    
+    box-sizing: border-box;
+     transform: translateX(0px);
+     /* transition: transform 0.5s ease-in-out;  */
+
+}
+
+#prodName{
+
+    display: grid;
+    width: 100%;
+    height: 30px;
+    grid-template-columns: 50% 50%;
+    font-size: 1.1vw;
+    
+
+}
+#name{
+    box-sizing: border-box;
+    padding-top: 1.5%;
+}
+
+#addToCart{
+    font-size: .8vw;
+    text-align: center;
+    color: black;
+    box-sizing: border-box;
+    padding-top: 2.5%;
+    border-radius: 5px;
+    background-color: rgb(255,225,65);
+    width: 35%;
+    height: 100%;
+    margin: -2% 0 0 65%;
+
+
+}
+
+#qty{
+    font-size: .95vw;
+    color: rgb(110,110,110);
+    margin-top: 1.5%;
+}
+
+
+#price{
+
+    font-size: .99vw;
+    font-weight: 600;
+    margin-top: 2%;
+    box-sizing: border-box;
+    padding-bottom: 8%;
+
+}
+
+.line{
+    border-top: .2px solid rgb(238,238,238);
+}
+
+#u{
+    font-size: .9vw;
+    margin-top: 3%;
+
+}
+
+#addqty{
+
+    box-sizing: border-box;
+    width: 9%;
+    color: rgb(12,131,31);
+    border: 1px solid rgb(12,131,31);
+    border-radius: 3px;
+    height: 40px;
+    text-align: center;
+    padding-top: 1.7%;
+    font-size: .95vw;
+    margin-top: 2%;
+
+}
+
+#locationBox{
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(247,247,247);
+    margin-top: 6%;
+
+}
 
 div{
     /* border: 1px solid black; */
