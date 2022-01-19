@@ -19,10 +19,27 @@ body{
 .nav-box{
     
     display: grid;
-    grid-template-columns: 10% 20% 50% 7% 7% 7%;
+    grid-template-columns: 250px 250px 250px 250px 250px 250px;
     align-items: center;    
 }
 .nav-box-padding{
-    margin: 20px 20px 10px 20px;
+    margin: 10px 20px 10px 20px;
 
+}
+.blinkit-logo{
+    width:110PX
+}
+
+
+
+.searchBox{
+    position: relative;
+}
+searchText{
+    width: 20px;;
+    border-radius: 5px;;
+    transition: all 0.2s
+}
+.searchBtn{
+    
 }
