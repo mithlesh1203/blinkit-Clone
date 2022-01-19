@@ -8,7 +8,6 @@ let arr = [
   "//cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=400,h=400/app/images/products/sliding_image/391306c.jpg",
 ];
 
-
 const leftBtn = document.getElementById("left");
 const rightBtn = document.getElementById("right");
 const slideShow = document.getElementById("slideShow")
