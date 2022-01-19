@@ -87,7 +87,7 @@ body::-webkit-scrollbar {
 #outerBox{
 
     width: 74%;
-    height: 350px;
+    height: 360px;
     margin-left: 12%;
     margin-top: 2%;
 
@@ -109,11 +109,20 @@ body::-webkit-scrollbar {
 #left{
     margin: 200% 0 0 50%;
     color: rgb(110,110,110);
+    transition: all .1s linear;
+}
+
+#left:active{
+    transform: scale(.9);
 }
 
 #right{
     margin: 200% 0 0 30%;
     color: rgb(110,110,110);
+    transition: all .1s linear;
+}
+#right:active{
+    transform: scale(.9);
 }
 
 #slideShow{
@@ -212,7 +221,7 @@ body::-webkit-scrollbar {
     background-color: rgb(247,247,247);
     margin-top: 6%;
     box-sizing: border-box;
-    padding: 2% 0 0 1% ;
+    padding: 2% 0 0 2.5% ;
     color: rgb(55,163,203);
     font-size: .95vw;
 }
@@ -220,11 +229,147 @@ body::-webkit-scrollbar {
 #locationName{
 
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 95% 5%;
 
+    /* margin: 2%; */
 
 }
 
+#inpBox{
+
+    width: 65%;
+    background-color: white;
+    height: 40px;
+    margin: 2.5% 0 0 .2% ;
+    display: grid;
+    grid-template-columns: 15% 60% 25%;
+    border: 1px solid rgb(238,238,238);
+    border-radius: 3px;
+
+}   
+
+#inpBox>div:nth-child(3){
+    
+    border-left: 1px solid rgb(238,238,238);
+}
+
+#inpBox>div>span{
+
+    padding: 17% 0 0 30% ;
+    /* text-align: center; */
+    box-sizing: border-box;
+
+}
+
+#inp{
+
+    width: 90%;
+    height: 80%;
+    font-size: .8vw;
+    outline: none;
+    color: rgb(170,170,170);
+    border: none;
+    box-sizing: border-box;
+    padding: 4% 0 0 0;
+
+}
+
+#detect{
+
+    display: grid;
+    grid-template-columns: 30% 60%;
+    grid-gap: 7%;
+    color: rgb(102,102,102);
+    box-sizing: border-box;
+    padding-top: 12%;
+
+}
+
+#outerBox2{
+     width: 74%;
+    height: 600px;
+    margin-left: 12%;
+    margin-top: 2%;
+
+    display: grid;
+    grid-gap: 3%;
+    grid-template-columns: 47% 50%;
+
+}
+#pd{
+    color: rgb(51,51,51);
+    font-size: 1.1vw;
+    box-sizing: border-box;
+    padding-bottom: 2.2%;
+}
+
+.h1{
+    color: rgb(51, 51, 51);
+    font-size: .97vw;
+    margin-top: 2.5%;
+}
+.h2{
+    width: 100%;
+    text-align: left;
+    color: #666;
+    font-size: .9vw;
+    margin-top: 2%;
+    font-weight: 300;
+    box-sizing: border-box;
+    padding-bottom: 1%;
+}
+
+#vm{
+    color: rgb(12,131,31);
+    text-align: center;
+    border-top: 1px solid rgb(238,238,238) ;
+    box-sizing: border-box;
+    padding-top: 2%;
+    font-size: 1vw;
+    display: grid;
+    grid-gap: .5%;
+    grid-template-columns: 50% 40%;
+    
+}
+#vm>div:nth-child(1){
+    text-align: right;
+    
+    padding-top: 1.5%;
+}
+
+
+#vm>div:nth-child(2){
+    text-align: left;
+    box-sizing: border-box;
+}
+#viewMore{
+    display: none;
+}
+
+#vl{
+    color: rgb(12,131,31);
+    text-align: center;
+    border-top: 1px solid rgb(238,238,238) ;
+    box-sizing: border-box;
+    padding-top: 2%;
+    font-size: 1vw;
+    display: grid;
+    grid-gap: .5%;
+    grid-template-columns: 50% 40%;
+    display: none;
+    
+}
+#vl>div:nth-child(1){
+    text-align: right;
+    
+    padding-top: 1.5%;
+}
+
+
+#vl>div:nth-child(2){
+    text-align: left;
+    box-sizing: border-box;
+}
 
 div{
     /* border: 1px solid black; */

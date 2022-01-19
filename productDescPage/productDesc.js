@@ -71,3 +71,32 @@ leftBtn.addEventListener('click', ()=>{
 })
 
 //////////////// SlideShow/////////////////////
+
+
+// viewMore=>
+
+const viewMore = document.getElementById("vm");
+const viewLess = document.getElementById("vl");
+
+viewMore.addEventListener("click", ()=>{
+
+    const more = document.getElementById("viewMore");
+
+    more.style.display = "block";
+    viewLess.style.display = "grid"
+
+    viewMore.style.display = "none";
+
+
+})
+
+viewLess.addEventListener("click", ()=>{
+
+    const less = document.getElementById("viewMore");
+
+    less.style.display = "none";
+
+    viewMore.style.display = "grid";
+    viewLess.style.display = "none";
+
+})
