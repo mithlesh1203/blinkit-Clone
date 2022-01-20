@@ -39,7 +39,9 @@ function getLocation(){
 
               let located = document.getElementById("locate");
 
-              located.textContent = data.City;
+              located.textContent =
+                data.address.City + "," + data.address.RegionAbbr;
+
 
               console.log(data);
             });
