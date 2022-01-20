@@ -101,13 +101,3 @@ viewLess.addEventListener("click", ()=>{
 
 })
 
-
-
-////location=>
-
-if( 'geolocation' in navigator){
-    console.log("geolocation is ava");
-}else{
-        console.log("geolocation is not ava");
-
-}
