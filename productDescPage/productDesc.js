@@ -40,6 +40,7 @@ function changeImage(){
 
     let img = document.createElement("img");
     img.src = arr[idx];
+    
 
     // img.style.transform = "translateZ(500px)";
 
@@ -99,3 +100,14 @@ viewLess.addEventListener("click", ()=>{
     viewLess.style.display = "none";
 
 })
+
+
+
+////location=>
+
+if( 'geolocation' in navigator){
+    console.log("geolocation is ava");
+}else{
+        console.log("geolocation is not ava");
+
+}
