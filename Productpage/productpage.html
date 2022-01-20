@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product page</title>
+    <link rel="icon" type="image/x-icon" href=" https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Blinkit-yellow-app-icon.svg/1200px-Blinkit-yellow-app-icon.svg.png">
+    <link href="./productStyle.css" rel="stylesheet">
+</head>
+<body>
+
+ <div class="main">
+  <div class="left_box">
+    <ul> 
+       
+
+        <li class="dropdown-content1 dropdown-content">
+          <div class="select_box space">
+            <div class="option_text"> <a  href="">Fruits & Vegitables</a> </div>
+         
+
+          </div>  
+        </li>
+     
+        <li class="dropdown-content1 dropdown-content">
+            <div class="select_box">
+             
+              <div class="option_text"> <a href="">Vegitables</a>   </div>
+  
+            </div>  
+          </li>
+
+          <li class="dropdown-content1 dropdown-content">
+            <div class="select_box">
+            
+              <div class="option_text"> <a href="">Organic & Hydrophobic</a>  </div>
+  
+            </div>  
+          </li>
+
+          <li class="dropdown-content1 dropdown-content">
+            <div class="select_box">
+           
+              <div class="option_text"> <a href="">Exotics</a>  </div>
+  
+            </div>  
+          </li>
+
+          <li class="dropdown-content1 dropdown-content">
+            <div class="select_box">
+           
+              <div class="option_text"> <a href="">Freshly Cut & Sprouts</a>  </div>
+  
+            </div>  
+          </li>
+
+          <li class="dropdown-content1 dropdown-content">
+            <div class="select_box">
+            
+              <div class="option_text"> <a href="">Flowers</a>   </div>
+  
+            </div>  
+          </li>
+     
+
+    </ul>
+  </div>
+ 
+
+ <div class="right_box" id="right_box"></div>
+
+ </div>
+
+
+
+
+
+    
+</body>
+</html>
+
+
+<script>
+
+
+let data = [ 
+
+
+{
+
+    name:"Kasmiri apple",
+    price: "100",
+    discount:"30",
+    shelf_life:"6",
+    category:"fruits",
+    image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/311059a.jpg" ,
+    key_features:"healthy",  // 1 = small 2= medium 3= large
+    description:"topveg fruits imported",
+
+
+},
+
+{
+
+name:"Melon",
+price: "120",
+discount:"30",
+shelf_life:"6",
+category:"fruits",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/339150a.jpg" ,
+key_features:"healthy",  // 1 = small 2= medium 3= large
+description:"topveg fruits imported",
+
+
+},
+
+{
+
+name:"Avacado",
+price: "115",
+discount:"30",
+shelf_life:"3",
+category:"fruits",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/327312a.jpg" ,
+key_features:"healthy",  // 1 = small 2= medium 3= large
+description:"topveg fruits imported",
+
+
+},
+
+{
+
+name:"Watermelon",
+price: "160",
+discount:"30",
+shelf_life:"8",
+category:"fruits",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/369752a.jpg" ,
+key_features:"healthy",  // 1 = small 2= medium 3= large
+description:"topveg fruits imported",
+
+
+},
+
+
+{
+
+name:"Sugarcane",
+price: "117",
+discount:"40",
+shelf_life:"6",
+category:"fruits",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/369414a.jpg" ,
+key_features:"healthy",  // 1 = small 2= medium 3= large
+description:"topveg fruits imported",
+
+
+},
+
+{
+
+name:"Pomegranate",
+price: "200",
+discount:"30",
+shelf_life:"9",
+category:"fruits",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/467689a.jpg" ,
+key_features:"healthy",  // 1 = small 2= medium 3= large
+description:"topveg fruits imported",
+
+
+},
+
+{
+
+name:"Strawberry",
+price: "150",
+discount:"30",
+shelf_life:"4",
+category:"fruits",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/439703a.jpg" ,
+key_features:"healthy",  // 1 = small 2= medium 3= large
+description:"topveg fruits imported",
+
+
+},
+
+{
+
+name:"Yellaki Banana",
+price: "60",
+discount:"30",
+shelf_life:"6",
+category:"fruits",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/424416a.jpg" ,
+key_features:"healthy",  // 1 = small 2= medium 3= large
+description:"topveg fruits imported",
+
+
+},
+
+{
+    
+name:"Tender coconut",
+price: "80",
+discount:"30",
+shelf_life:"6",
+category:"fruits",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/352443a.jpg" ,
+key_features:"healthy",  // 1 = small 2= medium 3= large
+description:"topveg fruits imported",
+
+
+},
+
+{
+
+name:"Thai Guava",
+price: "50",
+discount:"30",
+shelf_life:"7",
+category:"fruits",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/425788a.jpg" ,
+key_features:"healthy",  // 1 = small 2= medium 3= large
+description:"topveg fruits imported",
+
+
+},
+
+
+{
+
+name:"Muskmelon",
+price: "130",
+discount:"10",
+shelf_life:"8",
+category:"fruits",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/365455a.jpg" ,
+key_features:"healthy",  // 1 = small 2= medium 3= large
+description:"topveg fruits imported",
+
+
+},
+
+{
+
+name:"Avacado",
+price: "275",
+discount:"30",
+shelf_life:"6",
+category:"fruits",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/327312a.jpg" ,
+key_features:"healthy",  
+description:"topveg fruits imported",
+
+
+},
+
+////////////////////////////// Vegitables  ///////
+
+
+{
+
+name:"Coriander",
+price: "12",
+discount:"10",
+shelf_life:"2",
+category:"vegetable",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/3889a.jpg" ,
+key_features:"healthy and tasty",  
+description:"topveg vegetable imported",
+
+
+},
+
+{
+
+name:"Tomato",
+price: "25",
+discount:"10",
+shelf_life:"3",
+category:"vegetable",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/3881a.jpg" ,
+key_features:"healthy and tasty",  
+description:"topveg vegetable imported",
+
+
+},
+
+{
+
+name:"Onions",
+price: "35",
+discount:"10",
+shelf_life:"2",
+category:"vegetable",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/391306a.jpg" ,
+key_features:"healthy and tasty",  
+description:"topveg vegetable imported",
+
+
+},
+
+{
+
+name:"Green Chilli",
+price: "10",
+discount:"10",
+shelf_life:"5",
+category:"vegetable",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/423735a.jpg" ,
+key_features:"healthy and tasty",  
+description:"topveg vegetable imported",
+
+
+},
+
+{
+
+name:"Gingers",
+price: "27",
+discount:"10",
+shelf_life:"8",
+category:"vegetable",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/421703a.jpg" ,
+key_features:"healthy and tasty",  
+description:"topveg vegetable imported",
+
+
+},
+
+{
+
+name:"Mushroom",
+price: "85",
+discount:"20",
+shelf_life:"4",
+category:"vegetable",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/253317a.jpg" ,
+key_features:"healthy and tasty",  
+description:"topveg vegetable imported",
+
+
+},
+
+{
+
+name:"Cucumber",
+price: "40",
+discount:"10",
+shelf_life:"2",
+category:"vegetable",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/10088a.jpg" ,
+key_features:"healthy and tasty",  
+description:"topveg vegetable imported",
+
+
+},
+
+// 
+
+{
+
+name:"Potato",
+price: "30",
+discount:"10",
+shelf_life:"5",
+category:"vegetable",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/391305a.jpg" ,
+key_features:"healthy and tasty",  
+description:"topveg vegetable imported",
+
+
+},
+
+{
+
+name:"Spinach",
+price: "14",
+discount:"10",
+shelf_life:"2",
+category:"vegetable",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/332744a.jpg" ,
+key_features:"healthy and tasty",  
+description:"topveg vegetable imported",
+
+
+},
+
+{
+
+name:"Lemon",
+price: "15",
+discount:"10",
+shelf_life:"7",
+category:"vegetable",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/17748a.jpg" ,
+key_features:"healthy and tasty",  
+description:"topveg vegetable imported",
+
+
+},
+
+
+{
+
+name:"Beetroot",
+price: "45",
+discount:"10",
+shelf_life:"7",
+category:"vegetable",
+image_links:" https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/166848a.jpg" ,
+key_features:"healthy and tasty",  
+description:"topveg vegetable imported",
+
+
+},
+
+{
+
+name:"Broccoli",
+price: "70",
+discount:"10",
+shelf_life:"7",
+category:"vegetable",
+image_links:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/369742a.jpg" ,
+key_features:"healthy and tasty",  
+description:"topveg vegetable imported",
+
+
+},
+
+
+]
+
+
+
+
+
+
+
+
+let parent = document.getElementById("right_box");
+let box = document.getElementById("right_box");
+
+function viewProducts(d)                          
+      {
+         // console.log("bbb", d)                                // first on load
+        parent.innerHTML = null;
+ 
+         d.forEach( function ( el)              
+        // console.log("im in" , el)
+     {
+     let div = document.createElement('div');
+     div.setAttribute("class" , "product_card")
+
+     let card_text= document.createElement('div');
+     card_text.setAttribute("class" , "card_text")
+
+     //shelf_life
+     let unit = document.createElement('p');
+     unit.textContent= el.shelf_life+ " Unit"
+     unit.setAttribute("class" , "unit_txt")
+
+     let price = document.createElement('p');
+     price.textContent= "₹"+el.price;
+     price.setAttribute("class" , "card_price")
+ 
+     let title = document.createElement('h3');
+     title.textContent= el.name ;
+     title.setAttribute("class" , "card_title")
+
+     let discount= document.createElement('p');
+     discount.textContent= el.discount+ " Off";
+     discount.setAttribute("class" , "card_discount")
+
+     let sub_card = document.createElement('div');
+     sub_card.setAttribute("class" , "sub_card")
+     
+
+    
+        let cart_btn = document.createElement('button');
+          cart_btn.innerText ="Add To Cart";
+          cart_btn.setAttribute("class" , "Cart_div")
+
+         cart_btn.onclick =  ( )=> {
+
+            addcart( el);
+          };
+          
+          sub_card.append(price , cart_btn)
+     card_text.append( title , unit , sub_card )
+
+     
+     
+     let img = document.createElement('img');
+     img.src= el.image_links;
+     img.setAttribute("class" , "card_img")
+
+     div.onclick = function () {
+        referData(el)
+    }
+    
+ 
+     div.append(img , card_text)
+     box.append(div)
+     } );
+ 
+ 
+ 
+ 
+ 
+ 
+   }  // VieWProducts ends
+
+
+
+   viewProducts(data)
+
+
+
+   if (localStorage.getItem("itemData") == null) {
+    localStorage.setItem("itemData", JSON.stringify([]));
+}
+
+
+function referData(p) {
+
+    var ProductDes = JSON.parse(localStorage.getItem("itemData"));
+
+    ProductDes = [];
+
+    ProductDes.push(p);
+    console.log("pushed" , p)
+
+    localStorage.setItem("itemData", JSON.stringify(ProductDes));
+
+   // window.location.href = "ProductDescription.html";
+}
+
+
+
+
+function  addcart(e){
+      let myproduct_cart =  JSON.parse( localStorage.getItem("cart") );
+
+      myproduct_cart.push(e);
+
+        localStorage.setItem("cart" , JSON.stringify(myproduct_cart));
+
+        console.log("myjjjjjj" ,myproduct_cart );
+
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
