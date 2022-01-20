@@ -1,4 +1,5 @@
 const connect = require('./configs/db');
+
 const app = require('./index');
 
 app.listen(8001, async () => {
@@ -9,4 +10,4 @@ app.listen(8001, async () => {
     catch (e) {
         console.log(e.message);
     }
-})
+});

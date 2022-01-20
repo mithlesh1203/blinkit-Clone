@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "nodemon index\t"
+    "server":"nodemon src/server"
   },
   "repository": {
     "type": "git",
