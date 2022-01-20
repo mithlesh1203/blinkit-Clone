@@ -1,11 +1,12 @@
 .body{
     width: 1300px;
     margin: auto;
+    margin-top:80px;
     text-align: center;
 }
 .img-1{
     width: 1300px;
-    height:250px;
+    height:300px;
     margin: auto;
    
 }
@@ -57,6 +58,7 @@
     
 }
 .pBox-grid{
+    margin: auto;
     display:grid;
     grid-template-columns: 160px 160px 160px 160px 160px 160px 160px 160px;
     /* margin-left: 10px; */

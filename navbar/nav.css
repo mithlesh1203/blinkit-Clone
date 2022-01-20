@@ -79,10 +79,11 @@ nav .icon-burger .line {
     transition: all 0.2s linear;
 }
 .searchBtn{
-    padding:2px;
+    box-sizing: border-box;
+    padding: 1% 0 0 1%;
     width: 30px;
     height: 30px;
-    margin-top: 5px;
+    margin-top: 7px;
     background-color: #D4D4D4;
     position: absolute;
     border-radius:15px;
