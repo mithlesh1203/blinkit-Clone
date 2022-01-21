@@ -87,20 +87,20 @@
        
 
         <li class="dropdown-content1 dropdown-content">
-          <div class="select_box space" id="fruit_veg" >
-            <div class="option_text"> <a  href="productpage.html">Fruits & Vegitables</a> </div>
-         
-
-          </div>  
-        </li>
-     
-        <li class="dropdown-content1 dropdown-content">
-            <div class="select_box" id="veg" value="vegetable" onclick="vegg()">
-             
-              <div class="option_text"> <a href="vegpage.html">Vegitables</a>   </div>
+            <div class="select_box space" id="fruit_veg" >
+              <div class="option_text"> <a  href="productpage.html">Fruits & Vegitables</a> </div>
+           
   
             </div>  
           </li>
+       
+          <li class="dropdown-content1 dropdown-content">
+              <div class="select_box" id="veg" value="vegetable" onclick="vegg()">
+               
+                <div class="option_text"> <a href="vegpage.html">Vegitables</a>   </div>
+    
+              </div>  
+            </li>
 
           <li class="dropdown-content1 dropdown-content">
             <div class="select_box" id="fruit" value="organic">
@@ -180,7 +180,7 @@ let parent = document.getElementById("right_box");
 
 
  //To GET data from server
- fetch("http://localhost:8001/products")
+ fetch("http://localhost:8001/products?category=vegetable")
     .then((res) => {
         return res.json();
     })
@@ -303,10 +303,8 @@ function referData(p) {
     console.log("pushed" , p)
 
     localStorage.setItem("itemData", JSON.stringify(ProductDes));
-  
-   // window.location.assign("../productDescPage/productDesc.html")
-    
-   // window.location.href = ""
+
+   // window.location.href = "ProductDescription.html";
 }
 
 
