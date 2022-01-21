@@ -1,4 +1,4 @@
-const nav = document.querySelector('.navbar')
+const nav = document.querySelector('.navbar');
 fetch('../navbar/nav.html')
 .then(res=>res.text())
 .then(data=>{
@@ -6,7 +6,14 @@ fetch('../navbar/nav.html')
     const parser = new DOMParser()
     const doc = parser.parseFromString(data, 'text/html')
     eval(doc.querySelector('script').textContent)
+
+
+
 })
+
+
+
+
 
 // 43217800e9b2304cb46eb8ce5181fa4c
 
@@ -52,5 +59,6 @@ function getLocation(){
 }
 
 getLocation();
+
 
 // `https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?f=pjson&featureTypes=&location=${position.coords.longitude},${position.coords.latitude}`;

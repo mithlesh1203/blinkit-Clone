@@ -157,14 +157,14 @@ function referData(p) {
 }
 
 
-
+let myproduct_cart =  JSON.parse( localStorage.getItem("Cart") );
+      myproduct_cart = [];
 
 function  addcart(e){
-      let myproduct_cart =  JSON.parse( localStorage.getItem("cart") );
-
+      
       myproduct_cart.push(e);
 
-        localStorage.setItem("cart" , JSON.stringify(myproduct_cart));
+        localStorage.setItem("Cart" , JSON.stringify(myproduct_cart));
 
         console.log("myjjjjjj" ,myproduct_cart );
 
