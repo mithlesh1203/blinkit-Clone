@@ -64,7 +64,9 @@ nav .icon-burger .line {
     margin-left:15px;
 }
 
-
+#locate{
+	cursor: pointer;
+}
 
 .searchBox{
     position: relative;

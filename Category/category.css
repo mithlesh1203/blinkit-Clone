@@ -1,0 +1,36 @@
+a{
+    text-decoration:none;
+    color:black;
+}
+body{
+    background-color:#D4D4D4;
+}
+.catogery{
+    width: 1300px;
+    padding-top:40px;
+    margin: auto;
+    
+    
+}
+.c-box{
+    height:150px;
+    width:1300px;
+    margin-top:30px;
+    background-color:white;
+}
+.c-box-grid{
+    display:grid;
+    grid-template-columns: 200px 1000px;
+}
+c-img{
+    width: 100px;
+}
+.c-disc{
+    color:#84CC16;
+}
+.c-disc-1{
+    color:#0F172A;
+}
+.c-disc-2{
+    color:#A1A1AA;
+}
