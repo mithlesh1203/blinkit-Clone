@@ -28,8 +28,8 @@ function getLocation(){
 
             navigator.geolocation.getCurrentPosition(async (position) =>{
               // console.log(position);
-              console.log(position.coords.latitude);
-              console.log(position.coords.longitude);
+              // console.log(position.coords.latitude);
+              // console.log(position.coords.longitude);
 
               const res = await fetch(
                 `https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?f=pjson&featureTypes=&location=${position.coords.longitude},${position.coords.latitude}`
@@ -43,7 +43,7 @@ function getLocation(){
                 data.address.City + "," + data.address.RegionAbbr;
 
 
-              console.log(data);
+              // console.log(data);
             });
         }else{
                 console.log("geolocation is not ava");
