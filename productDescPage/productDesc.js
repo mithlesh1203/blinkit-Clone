@@ -19,6 +19,36 @@ shelfLife.textContent = itemArr[0].shelf_life + " days";
 
 // let desc = document.getElementById("desc");
 
+
+
+//addToCart=>
+
+let addToCart = document.getElementById("addToCart");
+
+addToCart.addEventListener("click", addToC);
+
+function addToC(){
+
+    if( localStorage.getItem("Cart") == null){
+        localStorage.setItem("Cart", JSON.stringify([]));
+    }
+
+    let CartArr = JSON.parse(localStorage.getItem("Cart")); 
+
+    CartArr = [];
+
+    // console.log(CartArr);
+    CartArr.push(itemArr);
+
+    localStorage.setItem("Cart", JSON.stringify(CartArr));
+
+
+     
+    alert("Your Product is added in cart")
+
+}
+
+
 // slideShow=>
 
 let arr = [
