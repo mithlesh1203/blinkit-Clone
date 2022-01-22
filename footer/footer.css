@@ -6,7 +6,7 @@ a{
 .bottom{
     width: 1300px;
     margin: auto;
-    background-color:#FCE7F3;
+    /* background-color:#FCE7F3; */
 }
 .margin{
     margin-top:-5px;
