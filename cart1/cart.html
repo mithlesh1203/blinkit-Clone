@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../navbar/nav.css">
+    <link rel="stylesheet" href="../footer/footer.css">
     <title>Document</title>
     <style>
         #main-cont {
@@ -310,6 +311,7 @@
     </div>
     <footer></footer>
 </body>
+<div id="footer"></div>
 
 </html>
 <script src="../navbar/nav.js"></script>
@@ -467,3 +469,15 @@
 </script>
 
 <script src="cart.js"></script>
+<script type="module"> 
+    // .....................FOOTER IMPORT................................
+    import Footer from "../import/footer-i.js";
+    console.log(Footer);
+
+    let footer = document.getElementById("footer");
+
+    footer.innerHTML = Footer();
+
+    // <!-- ..............................SECOND CARSOULES...................................... -->
+  
+ </script> -->

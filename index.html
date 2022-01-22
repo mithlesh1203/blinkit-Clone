@@ -7,13 +7,28 @@
     <title>Document</title>
     <link rel="stylesheet" href="../navbar/nav.css">
     <link rel="stylesheet" href="../body/body.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="/footer/footer.css">
 </head>
 <body>
     <nav class="navbar"></nav>
     <div id="footer"></div>
+   
   
 </body>
 </html>
 <script src="../navbar/nav.js"></script>
 <script src="../body/body.js"></script>
+<script type="module"> 
+    // .....................FOOTER IMPORT................................
+    import Footer from "../import/footer-i.js";
+    console.log(Footer);
+
+    let footer = document.getElementById("footer");
+
+    footer.innerHTML = Footer();
+
+    // <!-- ..............................SECOND CARSOULES...................................... -->
+  
+ </script>
+
+
