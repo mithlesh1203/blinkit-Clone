@@ -53,8 +53,6 @@
         #right {
             border: 1px solid #b1b7ca;
             height: 320px;
-
-
         }
 
         #checkout {
@@ -264,7 +262,7 @@
                     <div id="right">
 
                         <div id="checkout1">
-                            <label style="font-weight :700;">Subtotal (<span id="count"></span> ) :</label>
+                            <label style="font-weight :700;">Subtotal (<span id="sub_cnt"></span> ) :</label>
                             <input type="number" id="total_checkout" readonly="readonly">
 
 
@@ -326,6 +324,15 @@
     total.innerText = ` (${app_total} items)`;
 
 
+    let sub_cnt = document.getElementById("sub_cnt");
+    sub_cnt.innerText = app_total;
+
+
+
+    let sum = 0;
+    let pass = 1;
+    let flag = false;
+
 
 
     let parent = document.getElementById("container");
@@ -348,6 +355,7 @@
         let product_price = document.createElement("p");
         product_price.textContent = product.price;
         column3.appendChild(product_price);
+        let multi_price = +product_price.textContent
 
 
         let column4 = document.createElement("td");
@@ -362,6 +370,8 @@
         qty.readOnly = true;
         qty.value = 1;
 
+
+
         let btn_m = document.createElement("button");
         btn_m.innerText = "-";
         btn_m.setAttribute("class", "btn_pm");
@@ -370,16 +380,20 @@
 
             qty.stepUp(1);
 
-        });
-        btn_p.onmouseleave = function () {
+            pass = +qty.value;
 
-            cal_total(event);
+        });
+        btn_p.onclick = function () {
+
+
+            cal_total(event, multi_price);
 
         }
 
-        btn_m.onmouseleave = function () {
+        btn_m.onclick= function () {
 
-            cal_total(event);
+            cal_total(event, multi_price);
+            
 
         }
         btn_m.addEventListener('click', () => {
@@ -390,6 +404,7 @@
             else {
                 qty.stepDown(1);
             }
+            pass = +qty.value;
         })
 
         div1.append(qty, btn_p, btn_m);
@@ -439,6 +454,7 @@
                 }
             }
             x.remove();
+            location.reload();
 
             // // 
 
@@ -447,23 +463,35 @@
         column6.appendChild(btn);
 
 
-
-
-
-
-
-
-
         row.append(column1, column2, column3, column4, column5, column6);
 
 
         container.appendChild(row);
+
+        sum = sum + product.price;
+
+
+
     })
 
+    let total_checkout = document.getElementById("total_checkout")
+    total_checkout.value = sum;
 
-    function cal_total(event) {
-        alert("jjjj")
+
+
+    function cal_total(event, multi_price) {
+        console.log(pass);
+        console.log(multi_price);
+        let parent_price = event.target.parentNode.parentNode.parentNode
+        let child_price = parent_price.childNodes[4]
+        child_price.innerText = pass * multi_price;
+        // sum = 
+        // total_checkout.value = sum;
+        // console.log('child_price:', child_price)
+        event.target.blur();
+
     }
+
 </script>
 
 <script src="cart.js"></script>
