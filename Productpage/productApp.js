@@ -75,10 +75,16 @@ function viewProducts(d)
      let price = document.createElement('p');
      price.textContent= "₹"+el.price;
      price.setAttribute("class" , "card_price")
+     price.onclick = function () {
+        referData(el)
+    }
  
      let title = document.createElement('h3');
      title.textContent= el.name ;
      title.setAttribute("class" , "card_title")
+     title.onclick = function () {
+        referData(el)
+    }
 
      let discount= document.createElement('p');
      discount.textContent= el.discount+ " Off";
@@ -107,7 +113,7 @@ function viewProducts(d)
      img.src= el.image_links;
      img.setAttribute("class" , "card_img")
 
-     div.onclick = function () {
+     img.onclick = function () {
         referData(el)
     }
     
@@ -151,14 +157,14 @@ function referData(p) {
 }
 
 
-
+let myproduct_cart =  JSON.parse( localStorage.getItem("Cart") );
+      myproduct_cart = [];
 
 function  addcart(e){
-      let myproduct_cart =  JSON.parse( localStorage.getItem("cart") );
-
+      
       myproduct_cart.push(e);
 
-        localStorage.setItem("cart" , JSON.stringify(myproduct_cart));
+        localStorage.setItem("Cart" , JSON.stringify(myproduct_cart));
 
         console.log("myjjjjjj" ,myproduct_cart );
 
