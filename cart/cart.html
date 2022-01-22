@@ -1,54 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="cart.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <script src="cart.js"></script>
-  </head>
-  <body>
+</head>
+<body>
     <div id="out_cart" onclick="hide(`block`)">cart</div>
     <div id="Cart_sidebar">
-      <div class="cart_head">
-        <div>my cart</div>
-        <div onclick="hide(`none`)">X</div>
-      </div>
-      <div class="cart_mid">
-        <div id="order_details">
-          <div id="order_details_1st">
-            <div>shipment 1 of 1</div>
-            <div id="items_quantity">No items</div>
-          </div>
-          <div id="order_details_2nd">
-            <div>delivery in 15 minutes</div>
-            <div>
-              <span>from Super Store - </span>
-              <span id="add_place">Pune Kasturi Chowk ES8</span>
+        <div class="cart_head">
+            <div>my cart</div>
+            <div onclick="hide(`none`)">X</div>
+        </div>
+        <div class="cart_mid">
+            <div id="order_details">
+                <div id="order_details_1st" class="both_ends">
+                    <div class="small_gray">shipment 1 of 1 </div>
+                    <div class="small_gray items_quantity">No items</div>
+                </div>
+                <div id="order_details_2nd">
+                    <div class="black_bold">delivery in 15 minutes</div>
+                    <div>
+                        <span class="small_gray">from Super Store - </span>
+                        <span id="add_place" class="small_gray">Pune Kasturi Chowk ES8</span>
+                    </div>
+                </div>
             </div>
-          </div>
+            <!-- products -->
+            <div id="Product_div">
+            </div>
+            <!-- bill -->
+            <div id="bill_details">
+                <div class="black_bold">bill details</div>
+                <div class="both_ends">
+                    <div class="small_gray">MRP</div>
+                    <div id="price_in_cart" class="small_gray"></div>
+                </div>
+                <div class="both_ends">
+                    <div class="small_gray">convenience & safety fee</div>
+                    <div class="small_gray">₹5</div>
+                </div>
+                <div class="both_ends">
+                    <div>bill total</div>
+                    <div class="totoal_price_in_cart"></div>
+                </div>
+            </div>
         </div>
-        <div id="bill_details">
-          <div>bill details</div>
-          <div>
-            <div>MRP</div>
-            <div id="price_in_cart"></div>
-          </div>
-          <div>
-            <div>convenience & safety fee</div>
-            <div>₹5</div>
-          </div>
-          <div>
-            <div>bill total</div>
-            <div id="totoal_price_in_cart"></div>
-          </div>
+        <div class="crat_bottom">
+            <div id="cart_symbol" class=".material-icons"></div>
+            <div>
+                <div class="items_quantity"></div>
+                <div class="totoal_price_in_cart"></div>
+            </div>
+            <div>proceed ></div>
         </div>
-      </div>
-      <div class="crat_bottom">
-        <div id="cart_symbol"></div>
-        <div></div>
-      </div>
     </div>
-  </body>
+</body>
 </html>
