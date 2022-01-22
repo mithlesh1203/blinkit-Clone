@@ -12,6 +12,14 @@ nav {
 	height: 70px;
 	background-color: #FACC15;
 }
+
+#nav2{
+    border:1px solid lightgray;
+    height:60px;
+    width:100%;
+}
+
+
 nav .logo {
 	float: left;
 	width: 10%;
@@ -25,7 +33,7 @@ nav .logo {
 
 nav .links {
 	display: grid;
-    grid-template-columns:10% 50% 5% 5% 5%;
+    grid-template-columns:10% 50% 5% 5% 5% ;
 	justify-content: space-around;
 	align-items: center;
 }
