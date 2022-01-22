@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon.png">
+    <title>Mamaearth | Official Website | Buy Natural Skin Care Products Online</title>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <link rel="stylesheet" href="styles/payment.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/newNavbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./payment.css">
+    <link rel="stylesheet" href="../navbar/nav.css">
+
+</head>
+<body>
+    <nav class="navbar"></nav>
+    <div id="container">
+    <div id="payment-A">
+        <div id="payment-A-a">
+            <div id="payment-A-a-1">
+             <h3>Login to see your existing offers </h3>              
+            </div>
+            <div id="payment-A-a-2">
+               <a href="signup.html"> <button id="payment-A-a-2-btn">Login/SignUp</button></a>
+               </div>
+
+            <div id="userAddress">
+                <form action="">
+
+                <h4>Delivery Address</h4>
+                <div class="userAddress-2-input" id="userAddress-a">
+                    <input id="userAddress-FN" type="text" placeholder="First Name*"> 
+                    <input id="userAddress-LN" type="text" placeholder="Last Name*">
+                </div>
+                <div class="userAddress-2-input" id="userAddress-b">
+                    <input id="userAddress-EI" type="text" placeholder="Email ID*"> 
+                    <input id="userAddress-PN" type="text" placeholder="Phone Number*">                    
+                </div>
+                <div class="userAddress-3-input" id="userAddress-c">
+                    <input id="userAddress-PC" type="text" placeholder="PIN Code"> 
+                    <input id="userAddress-Ci" type="text" placeholder="City*"> 
+                    <input id="userAddress-St" type="text" placeholder="State*">
+                </div>
+                <div class="userAddress-1-input" id="userAddress-d">
+                    <input id="userAddress-Ad" type="text" placeholder="Address(House NO, Building,Street,Area)*">
+                </div>
+
+
+                </form>
+            </div>
+
+            <div id="payment-method">
+                <h3>Choose Payment Method</h3>
+                <div id="payment-method-box">
+                    <div id="payment-method-box-a">
+                        <div><h3><i class="fas fa-credit-card" ></i>    Debit / Credit card</h3></div>
+                        <div><p><img src="../images/upi-img.svg">    UPI</p></div>
+                        <div><p><img src="../images/wallets.svg">Wallets</p></div>
+                        <div><p><img src="../images/netbanking.svg">Netbanking</p></div>
+                        <div><p><img src="../images/cash-on.svg">Cash on Delivery</p></div>
+                        <div id="payment-method-box-a-bottom">
+                        <span><p>Powered by<img src="style/download.svg" alt=""></p></span>
+                        </div>
+                    </div>
+                    <div id="payment-method-box-b">
+
+                        <h3>Enter Credit / Debit card details</h3>
+
+                        <div>
+                            <p>Card Number</p>
+                            <input id="cardNo"  type="text" placeholder="xxxx xxxx xxxx xxxx" >
+                        </div>
+                        <div id="card-C-M">
+                            <div>
+                                <span><p>Expiry</p></span>                                
+                                <input id="date" type="text" placeholder="MM / YY">
+                            </div>
+                            <div id="cvvHolder">
+                                <span><p>CVV</p></span>
+                                <input id="cvv" type="text" placeholder="CVV">
+                            </div>
+
+                            
+                            <button id="paymentBTN" onclick="makePayment()"> PROCEED TO PAY </button>                            
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>            
+            
+
+        </div>
+    </div>
+      
+
+</div>
+
+
+<div id="footerDiv"></div>
+
+   
+
+    
+</body>
+</html>
+<script src="../navbar/nav.js"></script>
+<script src="./payment.js"></script>

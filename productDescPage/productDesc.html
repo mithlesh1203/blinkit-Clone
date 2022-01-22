@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./productDesc.css">
     <link rel="stylesheet" href="../navbar/nav.css">
+    <link rel="stylesheet" href="/footer/footer.css">
 
 </head>
 <body>
@@ -293,8 +294,21 @@
 
         </div>
     </div>
+    <div id="footer"></div>
     
 </body>
 </html>
 <script src="./productDesc.js"></script>
 <script src="../navbar/nav.js"></script>
+<script type="module"> 
+    // .....................FOOTER IMPORT................................
+    import Footer from "../import/footer-i.js";
+    console.log(Footer);
+
+    let footer = document.getElementById("footer");
+
+    footer.innerHTML = Footer();
+
+    // <!-- ..............................SECOND CARSOULES...................................... -->
+  
+ </script>

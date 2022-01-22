@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="./productDesc.css">
+    <link rel="stylesheet" href="../navbar/nav.css">
+    <link rel="stylesheet" href="/footer/footer.css">
 </head>
 <style>
  
@@ -23,7 +26,8 @@
     <div id="firstCont">
 
         <div id="firstBox">
-            <nav> 
+          <nav class="navbar"></nav>
+            <!-- <nav> 
                 <div class="logo">
                     <img class="blinkit-logo" src="../images/blinkit-logo.svg" alt="">
                 </div>
@@ -49,7 +53,7 @@
                     <div class="line"></div>
                     <div class="line"></div>
                 </label>
-            </nav>
+            </nav> -->
 
         <div id="secondBox">
 
@@ -146,7 +150,7 @@
 
 
 
-
+ <div id="footer"></div>
     
 </body>
 </html>
@@ -155,3 +159,15 @@
 
 <script src="../navbar/nav.js"></script>
 <script src="productApp.js"></script>
+<script type="module"> 
+  // .....................FOOTER IMPORT................................
+  import Footer from "../import/footer-i.js";
+  console.log(Footer);
+
+  let footer = document.getElementById("footer");
+
+  footer.innerHTML = Footer();
+
+  // <!-- ..............................SECOND CARSOULES...................................... -->
+
+</script>
