@@ -16,7 +16,7 @@ body{
     height:500px;
     box-shadow: 0 2px 3px 0 #0000001a;
     position: sticky;
-    top:0;
+    top:50px;
    
 }
 .right_box{

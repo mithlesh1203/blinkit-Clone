@@ -1,10 +1,59 @@
 
+// getting array=>
+
+let itemArr = JSON.parse(localStorage.getItem("itemData"));
+
+console.log(itemArr);
+
+// console.log(itemArr[0].image_links[0]);
+
+
+let prodName = document.getElementById("name");
+prodName.textContent = itemArr[0].name;
+
+let prodPrice = document.getElementById('price');
+prodPrice.textContent = "₹" +  itemArr[0].price;
+
+let shelfLife = document.getElementById("shelfLife");
+shelfLife.textContent = itemArr[0].shelf_life + " days";
+
+// let desc = document.getElementById("desc");
+
+
+
+//addToCart=>
+
+let addToCart = document.getElementById("addToCart");
+
+addToCart.addEventListener("click", addToC);
+
+function addToC(){
+
+    if( localStorage.getItem("Cart") == null){
+        localStorage.setItem("Cart", JSON.stringify([]));
+    }
+
+    let CartArr = JSON.parse(localStorage.getItem("Cart")); 
+
+    CartArr = [];
+
+    // console.log(CartArr);
+    CartArr.push(itemArr);
+
+    localStorage.setItem("Cart", JSON.stringify(CartArr));
+
+
+     
+    alert("Your Product is added in cart")
+
+}
+
+
 // slideShow=>
 
 let arr = [
-  "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=400,h=400/app/images/products/sliding_image/391306a.jpg",
+  `${itemArr[0].image_links[0]}`,
   "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=400,h=400/app/images/products/sliding_image/391306b.jpg",
-  "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=400,h=400/app/images/products/full_screen/pro_391306.jpg",
   "//cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=400,h=400/app/images/products/sliding_image/391306c.jpg",
 ];
 
@@ -101,13 +150,3 @@ viewLess.addEventListener("click", ()=>{
 
 })
 
-
-
-////location=>
-
-if( 'geolocation' in navigator){
-    console.log("geolocation is ava");
-}else{
-        console.log("geolocation is not ava");
-
-}
