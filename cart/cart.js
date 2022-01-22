@@ -1,7 +1,14 @@
 function hide(command) {
     let Cart_sidebar = document.getElementById("Cart_sidebar")
     Cart_sidebar.style.display = command
+    getPrpods()
     showProd()
+}
+
+
+function getPrpods() {
+    var  my_cart = JSON.parse( localStorage.getItem("Cart") );
+    
 }
 // temporary data  ₹
 let prod_price = 79
@@ -13,6 +20,9 @@ let prod_weight = "225 g"
 
 
 function showProd() {
+
+
+
     let product_div = document.getElementById("Product_div")
     for (let i = 0; i < 3; i++) {
         let cart_prod = document.createElement("div")
