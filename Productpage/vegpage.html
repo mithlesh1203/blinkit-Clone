@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product page</title>
+    <link rel="icon" type="image/x-icon" href=" https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Blinkit-yellow-app-icon.svg/1200px-Blinkit-yellow-app-icon.svg.png">
+    <link href="./productStyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../navbar/nav.css">
+    <link rel="stylesheet" href="../productDescPage/productDesc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+</head>
+<style>
+ 
+</style>
+<body>
+
+
+    <div id="firstCont">
+
+        <div id="firstBox">
+            <nav> 
+                <div class="logo">
+                    <img class="blinkit-logo" src="../images/blinkit-logo.svg" alt="">
+                </div>
+                     <ul class="links">
+                    <li><a href="#about">Location</a></li>
+                    <li>
+                        <div class="searchBox">
+                            <input type="text" class="searchText" placeholder="Search...">
+                            <a class="searchBtn" href="">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="#categoris">categoris</a></li>
+                    <li><a href="#profile">profile</a></li>
+                    <li><a href="#cart">cart</a></li>
+                </ul>
+              
+           
+               
+                <label for="nav-toggle" class="icon-burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </label>
+            </nav>
+
+        <div id="secondBox">
+
+            <div id="namesTag">
+
+                <div >grocery & staples</div>
+                <div > vegetables & fruits </div>
+                <div > household items </div>
+                <div > noodles, sauses & instant food </div>
+                <div > backery & biscuits </div>
+                <div > personal care </div>
+                <div > cold drinks & juices </div>
+                <div id="rt">
+                    <div>More </div> 
+                    
+                    <i class="fa fa-angle-down" style="font-size:18px"></i>
+                 </div>
+
+            </div>
+
+        </div>
+        
+    </div>
+
+
+
+
+
+
+
+
+ <div class="main">
+  <div class="left_box">
+    <ul> 
+       
+
+        <li class="dropdown-content1 dropdown-content">
+            <div class="select_box space" id="fruit_veg" >
+              <div class="option_text"> <a  href="productpage.html">Fruits & Vegitables</a> </div>
+           
+            </div>  
+          </li>
+       
+          <li class="dropdown-content1 dropdown-content">
+              <div class="select_box" id="veg" value="vegetable" onclick="vegg()">
+               
+                <div class="option_text"> <a href="vegpage.html">Vegitables</a>   </div>
+    
+              </div>  
+            </li>
+
+          <li class="dropdown-content1 dropdown-content">
+            <div class="select_box" id="fruit" value="organic">
+            
+              <div class="option_text"> <a href="">Organic & Hydrophobic</a>  </div>
+  
+            </div>  
+          </li>
+
+          <li class="dropdown-content1 dropdown-content">
+            <div class="select_box" id="exotics" value="exotics">
+           
+              <div class="option_text"> <a href="">Exotics</a>  </div>
+  
+            </div>  
+          </li>
+
+          <li class="dropdown-content1 dropdown-content">
+            <div class="select_box" id="sprout" value="sprouts">
+           
+              <div class="option_text"> <a href="">Freshly Cut & Sprouts</a>  </div>
+  
+            </div>  
+          </li>
+
+          <li class="dropdown-content1 dropdown-content">
+            <div class="select_box" id="flower" value="flower">
+            
+              <div class="option_text"> <a href="">Flowers</a>   </div>
+  
+            </div>  
+          </li>
+     
+
+    </ul>
+  </div>
+ 
+
+ <div class="right_box" id="right_box"></div>
+
+ </div>
+
+
+
+
+
+    
+</body>
+</html>
+
+
+
+<script src="../navbar/nav.js"></script>
+
+
+<script>
+
+
+
+
+
+
+var master= [];
+
+var res;
+
+
+//let fruitsandVeg = document.getElementById("right_box");
+
+
+let box = document.getElementById("right_box");
+let parent = document.getElementById("right_box");
+
+//let veg = document.getElementById("veg");
+
+
+
+
+
+
+ //To GET data from server
+ fetch("http://localhost:8001/products?category=vegetable")
+    .then((res) => {
+        return res.json();
+    })
+    .then((res) => {
+        console.log("res: ", res);
+        
+        viewProducts(res)
+       
+       
+       // viewMf(res)
+      // console.log("kkk" , master)
+      // console.log("moo", master)
+        
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+
+
+
+
+  
+ 
+
+
+
+
+function viewProducts(d)                          
+      {
+         /// console.log("bbb", d)  
+         
+       
+
+       
+        parent.innerHTML = null;
+ 
+         d.forEach( function ( el)              
+        // console.log("im in" , el)
+     {
+     let div = document.createElement('div');
+     div.setAttribute("class" , "product_card")
+
+     let card_text= document.createElement('div');
+     card_text.setAttribute("class" , "card_text")
+
+     //shelf_life
+     let unit = document.createElement('p');
+     unit.textContent= el.shelf_life+ " Unit"
+     unit.setAttribute("class" , "unit_txt")
+
+     let price = document.createElement('p');
+     price.textContent= "₹"+el.price;
+     price.setAttribute("class" , "card_price")
+ 
+     let title = document.createElement('h3');
+     title.textContent= el.name ;
+     title.setAttribute("class" , "card_title")
+
+     let discount= document.createElement('p');
+     discount.textContent= el.discount+ " Off";
+     discount.setAttribute("class" , "card_discount")
+
+     let sub_card = document.createElement('div');
+     sub_card.setAttribute("class" , "sub_card")
+     
+
+    
+        let cart_btn = document.createElement('button');
+          cart_btn.innerText ="Add To Cart";
+          cart_btn.setAttribute("class" , "Cart_div")
+
+         cart_btn.onclick =  ( )=> {
+
+            addcart( el);
+          };
+          
+          sub_card.append(price , cart_btn)
+     card_text.append( title , unit , sub_card )
+
+     
+     
+     let img = document.createElement('img');
+     img.src= el.image_links;
+     img.setAttribute("class" , "card_img")
+
+     div.onclick = function () {
+        referData(el)
+    }
+    
+ 
+     div.append(img , card_text)
+     box.append(div)
+     } );
+ 
+ 
+ 
+ 
+ 
+ 
+   }  // VieWProducts ends
+
+
+
+  // viewProducts(data)
+
+
+
+   if (localStorage.getItem("itemData") == null) {
+    localStorage.setItem("itemData", JSON.stringify([]));
+}
+
+
+function referData(p) {
+
+    var ProductDes = JSON.parse(localStorage.getItem("itemData"));
+
+    ProductDes = [];
+    ProductDes.push(p);
+    console.log("pushed" , p)
+
+    localStorage.setItem("itemData", JSON.stringify(ProductDes));
+
+    window.location.href = "ProductDescription.html";
+    window.location.assign("../productDescPage/productDesc.html")
+}
+
+
+
+
+function  addcart(e){
+      let myproduct_cart =  JSON.parse( localStorage.getItem("cart") );
+
+      myproduct_cart.push(e);
+
+        localStorage.setItem("cart" , JSON.stringify(myproduct_cart));
+
+        console.log("myjjjjjj" ,myproduct_cart );
+
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
+<script src="vegApp.js">
+
+</script>

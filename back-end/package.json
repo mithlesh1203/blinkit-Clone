@@ -1,0 +1,24 @@
+{
+  "name": "blinkit-api",
+  "version": "1.0.0",
+  "description": "This sends various products on request by user",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.1.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "server": "nodemon src/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mithlesh1203/blinkit-Clone.git"
+  },
+  "author": "blinkit cloners",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mithlesh1203/blinkit-Clone/issues"
+  },
+  "homepage": "https://github.com/mithlesh1203/blinkit-Clone#readme"
+}
