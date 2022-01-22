@@ -1,0 +1,221 @@
+body{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+input{
+    padding-left: 15px;
+    border: 0.5px solid gray;
+}
+input:focus {
+    border-color: none ;
+    outline: 0.5px solid #20b9f1;
+}
+
+
+#container{
+    margin-top: 20px;
+}
+#payment-A{
+    /* height: 600px; */
+    width: 55%;
+    /* border: 1px solid red ; */
+    margin-left: 10%;
+}
+
+
+#payment-A > div {
+    width: 100%;
+}
+#payment-A-a{
+    display: inline-block;
+    /* border: 1px solid gray; */
+}
+
+#payment-A-a-1 {
+   /* margin-left: 50px ; */
+   display: inline-block; 
+}
+#payment-A-a-2  {
+    margin-left: 50px ;
+    display: inline-block;
+    
+}
+
+#payment-A-a-2-btn{
+    border: 1.5px solid #20b9f1; 
+    color: #20b9f1;
+    height: 40px;
+    width: 120px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: 500;
+    background-color: white;
+}
+#payment-A-a-2-btn:hover{
+    color: white;
+    background-color: #20b9f1;
+}
+
+/* #userAddress{
+    display: flex;
+
+
+} */
+#userAddress   input {
+    border-radius: 5px;
+    height: 40px;       
+    border: 0.2px solid gray;  
+    margin-top: 1.5%;
+    /* border: 1px solid red; */
+}
+
+#userAddress  div{
+    margin-top: 20px;
+    /* padding-left: 20px; */
+}
+
+
+.userAddress-2-input{
+    display: grid;
+    margin-top: 5px;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+}
+
+.userAddress-3-input{
+    display: grid;
+    grid-gap: 10px;
+    margin-top: 5px;
+    grid-template-columns: auto auto auto;
+}
+
+.userAddress-1-input{
+    display: grid;
+    margin-top: 5px;
+    grid-template-columns: auto ;
+}
+
+
+
+
+
+
+
+
+
+
+#payment-method{
+    /* border: 1px solid green; */
+    /* height: 500px; */
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+#payment-method-box{
+    /* border:0.5px solid gray; */
+    /* border:1px solid  red; */
+    height: 440px;
+    width: 100%;
+}
+#payment-method-box-a{
+    width: 38%;
+    /* border: 1px solid lightgray; */
+    height: 445px;
+    border-right:none ;    
+    display: inline-block;
+    border:1px solid  lightgray;
+}
+
+#payment-method-box-a div{
+    padding-left: 10px;    
+    height: 30px;
+}
+#payment-method-box-a div h3 {
+    color: black;
+   
+    
+    /* border: 1px solid red; */
+    
+    /* opacity: 1; */
+}
+#payment-method-box-a div p{
+    color: gray;
+    /* border: 1px solid red; */
+   
+}
+
+#payment-method-box-a div img {
+    margin-right: 10px;
+    margin-left: 12%;
+    /* border: 1px solid blue; */
+    
+   
+}
+
+#payment-method-box-a-bottom {
+    text-align: center;
+    margin-top:50%;
+    /* border: 1px solid red; */
+}
+
+#payment-method-box-b{
+    width: 58%;
+    border-right:none ;
+    vertical-align: top;   
+    border: 0.5px solid ;    
+    height: 445px;
+    padding-left: 10px;
+    display: inline-block;
+    margin-top: -54%;
+    margin-left: 40%;
+    border: 1px solid lightgray;
+    /* border: 1px solid red; */
+}
+/* #payment-method-box-b  h3  {
+    padding-left: 10px;
+} */
+
+#cardNo{
+    height: 40px;
+    width: 85%;
+    font-size: 20px;
+    border-radius: 5px;
+    /* border: 1px solid red; */
+}
+
+#card-C-M div {
+    display: inline-block;
+    /* border: 1px solid red; */
+    /* margin-left: 20px;     */
+}
+#card-C-M div input {
+    width: 92%;
+    height: 40px;
+    border-radius: 5px;
+    /* border: 1px solid red; */
+}
+
+#cvvHolder{
+    margin-left: 50px;
+}
+#paymentBTN{
+    display: block;
+    margin-top: 20px;
+    height: 50px;
+    width: 200px;
+    background-color:#20b9f1;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    /* outline: none; */
+}
+
+#footerDiv{
+    margin-top: 50px;
+}
+.fa-credit-card{
+    color: grey;
+    margin-left: 40px;
+}
