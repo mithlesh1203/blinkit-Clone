@@ -166,6 +166,8 @@ function  addcart(e){
         localStorage.setItem("cart" , JSON.stringify(myproduct_cart));
 
         console.log("myjjjjjj" ,myproduct_cart );
+        
+    alert("Your Product is added in cart"); 
 
     }
 

@@ -35,7 +35,7 @@ function addToC(){
 
     let CartArr = JSON.parse(localStorage.getItem("Cart")); 
 
-    CartArr = [];
+    
 
     // console.log(CartArr);
     CartArr.push(itemArr);
